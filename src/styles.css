@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/font/Inter/static/Inter-Regular.ttf') format('ttf'),
+  url('./assets/font/Inter/static/Inter-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/font/Inter/static/Inter-Bold.ttf') format('ttf'),
+  url('./assets/font/Inter/static/Inter-Bold.ttf') format('ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+*{
+  font-family: 'Inter' , sans-serif;
+}
+

@@ -1,0 +1,9 @@
+<div class="container">
+  <app-sidebar (logoutEvent)="logout()" [sideBarList]="sideBarList" [username]="userDetails?.username"></app-sidebar>
+  <div class="main">
+    <app-top-bar [username]="userDetails?.username"></app-top-bar>
+    <div class="body">
+      <router-outlet/>
+    </div>
+  </div>
+</div>

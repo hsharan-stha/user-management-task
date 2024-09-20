@@ -1,0 +1,166 @@
+{
+  "product": [
+    {
+      "id": "3355",
+      "label": "VolleyBall",
+      "price": "1000",
+      "isFavouriteOf": [
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "id": "f055",
+      "label": "BasketBall",
+      "price": "2500",
+      "isFavouriteOf": [
+        2
+      ]
+    },
+    {
+      "id": "809d",
+      "label": "Pants",
+      "price": "2000",
+      "isFavouriteOf": [
+        2
+      ]
+    },
+    {
+      "id": "3da3",
+      "label": "Jeans 1",
+      "price": "3000",
+      "isFavouriteOf": []
+    }
+  ],
+  "user": [
+    {
+      "id": "1",
+      "first_name": "Hari",
+      "last_name": "shrestha",
+      "username": "hshtha",
+      "isAdmin": true,
+      "department": "MARKETING"
+    },
+    {
+      "id": "",
+      "first_name": "asdsad",
+      "last_name": "asdasd",
+      "username": "asad",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdsad",
+      "last_name": "asdasd",
+      "username": "asad",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "awdasdad",
+      "last_name": "adasdasd",
+      "username": "asdadasd",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "asdas",
+      "last_name": "asd",
+      "username": "asd",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "asdas",
+      "last_name": "asd",
+      "username": "asd",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "asdasdasd",
+      "last_name": "asd",
+      "username": "150212",
+      "isAdmin": false,
+      "department": "0"
+    },
+    {
+      "id": "",
+      "first_name": "asdasdasd",
+      "last_name": "asdasd",
+      "username": "stw0047",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "asdasdasd",
+      "last_name": "asdasdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "asdasdasd",
+      "last_name": "asdasdasd",
+      "username": "asdasdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasdasd",
+      "last_name": "asdasdasd",
+      "username": "asdasdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasdasd",
+      "last_name": "asdasdasd",
+      "username": "asdasdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasdasd",
+      "last_name": "asdasdasd",
+      "username": "asdasdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdad",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasdad",
+      "username": "asdas",
+      "isAdmin": true,
+      "department": "2"
+    }
+  ]
+}

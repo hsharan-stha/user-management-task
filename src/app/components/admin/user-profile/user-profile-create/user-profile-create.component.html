@@ -1,0 +1,108 @@
+
+<div class="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+  <form [formGroup]="userProfileForm" (submit)="saveUser()" class="w-full max-w-lg bg-white shadow-md rounded-lg p-6 space-y-4">
+    <h2 class="text-2xl font-bold mb-6 text-center">User Registration</h2>
+    <div class="form-control">
+      <label for="first_name" class="label">
+        <span class="label-text">First Name</span>
+        <span class="label-text-alt text-red-500">*</span>
+      </label>
+      <input type="text" id="first_name" class="input input-bordered w-full"
+             placeholder="Enter your first name" formControlName="first_name"
+      />
+       <ng-container *ngIf="checkValidation(userProfileForm,'first_name')">
+                <span *ngIf="fieldValidation(userProfileForm,'first_name')?.errors?.['required']" class="text-red-500 text-sm">
+                  This is required Field</span>
+                <span *ngIf="fieldValidation(userProfileForm,'first_name')?.errors?.['minLength']?.['requiredLength'] < 3"
+                     class="text-red-500 text-sm">Text length must be greater than 3</span>
+              </ng-container>
+    </div>
+
+    <div class="form-control">
+      <label for="last_name" class="label">
+        <span class="label-text">Last Name</span>
+        <span class="label-text-alt text-red-500">*</span>
+      </label>
+      <input
+        type="text"
+        id="last_name"
+        formControlName="last_name"
+        class="input input-bordered w-full"
+        placeholder="Enter your last name"
+
+      />
+      <ng-container *ngIf="checkValidation(userProfileForm,'last_name')">
+                <span *ngIf="fieldValidation(userProfileForm,'last_name')?.errors?.['required']" class="text-red-500 text-sm">
+                  This is required Field</span>
+        <span *ngIf="fieldValidation(userProfileForm,'last_name')?.errors?.['minLength']?.['requiredLength'] < 3"
+             class="text-red-500 text-sm">Text length must be greater than 3</span>
+      </ng-container>
+
+    </div>
+
+    <div class="form-control">
+      <label for="username" class="label">
+        <span class="label-text">Username</span>
+        <span class="label-text-alt text-red-500">*</span>
+      </label>
+      <input
+        type="text"
+        id="username"
+        formControlName="username"
+        class="input input-bordered w-full"
+        placeholder="Enter a username"
+      />
+      <ng-container *ngIf="checkValidation(userProfileForm,'username')">
+                <span *ngIf="fieldValidation(userProfileForm,'username')?.errors?.['required']" class="text-red-500 text-sm">
+                  This is required Field</span>
+        <span *ngIf="fieldValidation(userProfileForm,'username')?.errors?.['inValidUsername']"
+              class="text-red-500 text-sm">Username can only have lowercase letter [a-z], numbers(0-9), dots(.) and underscores(_).</span>
+
+      </ng-container>
+    </div>
+
+    <div class="form-control">
+      <label class="label">
+        <span class="label-text">Is Admin?</span>
+        <span class="label-text-alt text-red-500">*</span>
+      </label>
+      <div class="flex space-x-4 gap-2">
+        <label class="flex label cursor-pointer gap-2">
+          <input type="radio" formControlName="isAdmin" [value]="true" class="radio checked:bg-blue-500" />
+          <span class="label-text">Yes</span>
+        </label>
+        <label class="flex label cursor-pointer gap-2">
+          <input type="radio" formControlName="isAdmin" [value]="false" class="radio checked:bg-blue-500" />
+          <span class="label-text">No</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-control">
+      <label for="department" class="label">
+        <span class="label-text">Department</span>
+        <span class="label-text-alt text-red-500">*</span>
+      </label>
+      <select
+        id="department"
+        formControlName="department"
+        class="select select-bordered w-full"
+      >
+        <option disabled selected>Select your department</option>
+        <option  *ngFor="let item of DepartmentOptions" [value]="item.value">{{item?.name}}</option>
+      </select>
+      <ng-container *ngIf="checkValidation(userProfileForm,'department')">
+                <span *ngIf="fieldValidation(userProfileForm,'department')?.errors?.['required']" class="text-red-500 text-sm">
+                  This is required Field</span>
+
+      </ng-container>
+    </div>
+
+    <div class="form-control mt-6">
+      <button type="submit" class="btn btn-primary w-full">
+        Register
+      </button>
+    </div>
+
+  </form>
+</div>
