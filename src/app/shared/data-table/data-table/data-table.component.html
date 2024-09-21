@@ -11,22 +11,21 @@
     </thead>
     <tbody>
     <!-- Regular User -->
-<!--    <tr>-->
-<!--      <td>-->
-<!--        <input type="text" placeholder="Search" class="input input-bordered input-sm w-full" />-->
+    <tr>
+      <td *ngFor="let h of columns">
+        <input *ngIf="h.searchable" type="text"
+               (keyup)="h?.handleEvent? h?.handleEvent($event,h,'search'):undefined"
+               placeholder="Search"
+               class="input input-bordered input-sm w-full" />
+      </td>
 
-<!--      </td>-->
-<!--      <td>-->
-<!--        <input type="text" placeholder="Search" class="input input-bordered input-sm w-full" />-->
-
-<!--      </td>-->
-<!--      <td>        <input type="text" placeholder="Search" class="input input-bordered input-sm w-full" />-->
-<!--      </td>-->
-<!--    </tr>-->
+    </tr>
     <tr *ngFor="let data of  dataList$ | async">
       <td *ngFor="let column of columns">
       <ng-container *ngIf="column.cell; else defaultCell">
-        <div [innerHTML]="getCellContent(data,column)" (click)="column?.handleEvent? column?.handleEvent(data,$event):undefined"></div>
+        <div [innerHTML]="getCellContent(data,column)"
+             (click)="column?.handleEvent? column?.handleEvent($event,data,'click'):undefined">
+        </div>
       </ng-container>
       <ng-template #defaultCell>
         {{ data[column.key] }}
@@ -39,11 +38,11 @@
   <!-- Pagination -->
   <div class="flex justify-between items-center mt-4">
     <div class="flex flex-row gap-3">
-      <button class="btn btn-sm">Previous</button>
-      <button class="btn btn-sm ">Next</button>
+      <button [disabled]="paginate.currentPage===1" class="btn btn-sm" (click)="paginate.previousPage(paginate.currentPage)">Previous</button>
+      <button class="btn btn-sm " (click)="paginate.nextPage(paginate.currentPage)">Next</button>
     </div>
     <div>
-      <span>Page 1 of 10</span>
+      <span>Page {{paginate.currentPage}}</span>
     </div>
   </div>
 </div>
