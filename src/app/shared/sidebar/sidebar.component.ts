@@ -2,6 +2,8 @@ import {Component, EventEmitter, HostBinding, Input, Output} from '@angular/core
 import {NgForOf, NgIf, NgOptimizedImage} from "@angular/common";
 import {RouterLink, RouterLinkActive} from "@angular/router";
 import {SideBar} from "../../interface/SideBar";
+import {FaIconComponent} from "@fortawesome/angular-fontawesome";
+import {faSignOut} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-sidebar',
@@ -11,7 +13,8 @@ import {SideBar} from "../../interface/SideBar";
     RouterLink,
     RouterLinkActive,
     NgForOf,
-    NgIf
+    NgIf,
+    FaIconComponent
   ],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css'
@@ -29,4 +32,5 @@ export class SidebarComponent {
       this.logoutEvent.emit(true);
   }
 
+  protected readonly faSignOut = faSignOut;
 }

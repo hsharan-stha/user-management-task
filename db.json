@@ -927,6 +927,14 @@
       "username": "asdad",
       "isAdmin": true,
       "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "zaasdasd",
+      "last_name": "asdasd",
+      "username": "asdas",
+      "isAdmin": true,
+      "department": "2"
     }
   ]
 }

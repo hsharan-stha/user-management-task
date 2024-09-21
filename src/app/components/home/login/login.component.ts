@@ -1,13 +1,13 @@
 import {Component, HostBinding, OnInit} from '@angular/core';
-import {LoginService} from "../../../service/login/login.service";
-import {AuthService} from "../../../service/auth/auth.service";
+import {LoginService} from "@/app/service/login/login.service";
+import {AuthService} from "@/app/service/auth/auth.service";
 import {Router} from "@angular/router";
-import {CredentialInfo} from "../../../interface/CredentialInfo";
+import {CredentialInfo} from "@/app/interface/CredentialInfo";
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
-import {LoginPayload} from "../../../interface/LoginPayload";
+import {LoginPayload} from "@/app/interface/LoginPayload";
 import {NgIf, NgOptimizedImage} from "@angular/common";
-import {FormValidateMark} from "../../../utils/FormValidateMark";
-import {ToastService} from "../../../shared/toast/service/toast.service";
+import {FormValidateMark} from "@/app/utils/FormValidateMark";
+import {ToastService} from "@/app/shared/toast/service/toast.service";
 import {faInfo} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
