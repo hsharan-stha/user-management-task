@@ -44,11 +44,10 @@ on(loadUserProfileFail,(state,action)=>{
     }
   }),
   on(getByIdUserProfileSuccess,(state,action)=>{
-    console.log(action.data)
     return {
       ...state,
       list:undefined,
-      data:action.data,
+      getDetail:action.getDetail,
       error:""
     }
   }),

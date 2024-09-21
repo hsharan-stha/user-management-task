@@ -22,6 +22,7 @@ export const getUserProfileError=createSelector(
 
 export const getUserProfileDetail=createSelector(
   getUserProfileState,(state)=>{
-    return state.data
+    console.log(state)
+    return state.getDetail
   }
 )

@@ -31,6 +31,14 @@
       "username": "test",
       "isAdmin": true,
       "department": "Management"
+    },
+    {
+      "id": "2a6b",
+      "first_name": "laxmi",
+      "last_name": "shrestha",
+      "username": "laxmi",
+      "isAdmin": true,
+      "department": "Marketing"
     }
   ]
 }

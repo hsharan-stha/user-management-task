@@ -62,7 +62,7 @@ export class UserProfileEffects{
     exhaustMap((action)=>{
       return this.userProfileService.getById(action.id).pipe(
         map((data)=>{
-          return getByIdUserProfileSuccess({data})
+          return getByIdUserProfileSuccess({getDetail:data})
         }),
         catchError((err)=>{
           return of(getByIdUserProfileFail({error:err.message}))

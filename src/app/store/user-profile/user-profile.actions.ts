@@ -22,5 +22,5 @@ export const GET_BY_ID_USER_PROFILE="[User Profile By Id] as user profile"
 export const GET_BY_ID_USER_PROFILE_SUCCESS="[User Profile By Id] as user profile success"
 export const GET_BY_ID_USER_PROFILE_FAIL="[User Profile By Id] as user profile fail"
 export const getByIdUserProfile=createAction(GET_BY_ID_USER_PROFILE,props<{id:number}>())
-export const getByIdUserProfileSuccess=createAction(GET_BY_ID_USER_PROFILE_SUCCESS,props<{data:UserProfile}>())
+export const getByIdUserProfileSuccess=createAction(GET_BY_ID_USER_PROFILE_SUCCESS,props<{getDetail:UserProfile}>())
 export const getByIdUserProfileFail=createAction(GET_BY_ID_USER_PROFILE_FAIL,props<{error:string}>())

@@ -10,7 +10,8 @@ export interface UserProfile{
 
 export interface UserProfileResponse{
   list:UserProfile[] | undefined ,
-  data:UserProfile | undefined
+  data:UserProfile | undefined,
+  getDetail:UserProfile | undefined,
   error:string
 }
 
