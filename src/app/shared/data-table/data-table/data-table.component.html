@@ -1,0 +1,49 @@
+<div class="overflow-x-auto">
+  <table class="table table-compact w-full text-left">
+    <!-- Table Header -->
+    <thead>
+    <tr>
+
+      <th *ngFor="let h of columns" scope="col" [class]="h.className">
+        {{h.header}}
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Regular User -->
+<!--    <tr>-->
+<!--      <td>-->
+<!--        <input type="text" placeholder="Search" class="input input-bordered input-sm w-full" />-->
+
+<!--      </td>-->
+<!--      <td>-->
+<!--        <input type="text" placeholder="Search" class="input input-bordered input-sm w-full" />-->
+
+<!--      </td>-->
+<!--      <td>        <input type="text" placeholder="Search" class="input input-bordered input-sm w-full" />-->
+<!--      </td>-->
+<!--    </tr>-->
+    <tr *ngFor="let data of  dataList$ | async">
+      <td *ngFor="let column of columns">
+      <ng-container *ngIf="column.cell; else defaultCell">
+        <div [innerHTML]="getCellContent(data,column)" (click)="column?.handleEvent? column?.handleEvent(data,$event):undefined"></div>
+      </ng-container>
+      <ng-template #defaultCell>
+        {{ data[column.key] }}
+      </ng-template>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <!-- Pagination -->
+  <div class="flex justify-between items-center mt-4">
+    <div class="flex flex-row gap-3">
+      <button class="btn btn-sm">Previous</button>
+      <button class="btn btn-sm ">Next</button>
+    </div>
+    <div>
+      <span>Page 1 of 10</span>
+    </div>
+  </div>
+</div>
