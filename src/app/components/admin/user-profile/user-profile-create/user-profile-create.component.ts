@@ -9,7 +9,9 @@ import {ConfirmService} from "@/app/shared/confirm/service/confirm.service";
 import {Store} from "@ngrx/store";
 import {addUserProfile,} from "@/app/store/user-profile/user-profile.actions";
 import {getSaveResponse, getUserProfileError} from "@/app/store/user-profile/user-profile.selector";
-import {combineLatest, Subject, takeUntil} from "rxjs";
+import {combineLatest, take} from "rxjs";
+import {ToastService} from "@/app/shared/toast/service/toast.service";
+import {faClose, faSave} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-user-profile-create',
@@ -28,11 +30,10 @@ export class UserProfileCreateComponent extends FormValidateMark implements OnIn
   protected readonly userProfileForm:FormGroup;
   protected readonly DepartmentOptions = DepartmentOptions;
 
-  private unSubscribe$=new Subject<void>();
-
   constructor(private formBuilder: FormBuilder,
               private store: Store,
               private confirmService:ConfirmService,
+              private toastService:ToastService,
               private router: Router) {
     super();
     this.userProfileForm = this.formBuilder.group({
@@ -46,38 +47,48 @@ export class UserProfileCreateComponent extends FormValidateMark implements OnIn
   }
 
   ngOnInit(): void {
+   this.loadSuccessErrorHandler()
   }
 
   protected saveUser(){
+
     if (this.userProfileForm.invalid) {
       this.validateAllFormFields(this.userProfileForm)
       return;
     }
-    this.store.dispatch(addUserProfile({payload:this.userProfileForm.value}))
 
-    combineLatest([
-      this.store.select(getSaveResponse),
-      this.store.select(getUserProfileError)
-    ]).pipe(
-      takeUntil(this.unSubscribe$)
-    ).subscribe(([success,error])=>{
-      if(success){
-        alert("success")
-      }
+    this.confirmService.confirm(
+      'Are you sure you want to proceed?',
+      'Please confirm whether you want to continue or cancel the process.')
+      .pipe(take(1))
+      .subscribe((confirmed)=>{
+        if(confirmed) {
+          this.store.dispatch(addUserProfile({payload: this.userProfileForm.value}))
+        }
+      })
 
-      if(error){
-        alert(error)
-      }
-    })
   }
 
   protected async navigateToList(): Promise<void> {
     await this.router.navigateByUrl("/admin/user-profile-list")
   }
 
+  private loadSuccessErrorHandler(){
+    combineLatest([
+      this.store.select(getSaveResponse),
+      this.store.select(getUserProfileError)
+    ]).subscribe(([success,error])=>{
+      if(success){
+        this.toastService.show("Date Save Successfully", faSave);
+      }
+      if(error){
+        this.toastService.show("Date Save Failed", faClose);
+      }
+    })
+  }
+
   ngOnDestroy(): void {
-    this.unSubscribe$.next();
-    this.unSubscribe$.complete();
+
   }
 
 

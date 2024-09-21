@@ -4,23 +4,5 @@
   "role": "Admin",
   "username": "Hari",
   "password": "admin@123"
-  },
-  {
-    "id": 2,
-    "role": "Normal",
-    "username": "Rabin",
-    "password": "normal@123"
-  },
-  {
-    "id": 3,
-    "role": "Normal",
-    "username": "sabin",
-    "password": "normal@123"
-  },
-  {
-    "id": 4,
-    "role": "Normal",
-    "username": "nitesh",
-    "password": "normal@123"
   }
 ]

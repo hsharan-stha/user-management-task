@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import {IconDefinition} from "@fortawesome/fontawesome-common-types";
 @Component({
   selector: 'app-toast',
   standalone: true,
@@ -9,8 +9,8 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
   styleUrl: './toast.component.css'
 })
 export class ToastComponent {
-  faCoffee = faCoffee;
 
   @Input() public message: string ="";
+  @Input() public icon: IconDefinition;
 
 }

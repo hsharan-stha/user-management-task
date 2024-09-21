@@ -6,46 +6,53 @@ import {
   Injectable,
   Injector
 } from '@angular/core';
-import {ToastComponent} from "../toast.component";
+import {ToastComponent} from '@/app/shared/toast/toast.component';
+import {IconDefinition} from "@fortawesome/fontawesome-common-types";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ToastService {
 
-  private componentRef!:ComponentRef<any>;
+  private componentRef?: ComponentRef<ToastComponent>;
 
-  constructor(private componentFactoryResolver: ComponentFactoryResolver,
-              private appRef: ApplicationRef,
-              private injector: Injector
-  ) { }
+  constructor(
+    private componentFactoryResolver: ComponentFactoryResolver,
+    private appRef: ApplicationRef,
+    private injector: Injector
+  ) {}
 
-
-  public show(message: String) {
+  public show(message: string,icon:IconDefinition): void {
     this.drop();
-    let componentFactory = this.componentFactoryResolver.resolveComponentFactory(ToastComponent);
+    this.createToastComponent(message,icon);
+    this.scheduleRemoval();
+  }
+
+  private createToastComponent(message: string,icon:IconDefinition): void {
+    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(ToastComponent);
     this.componentRef = componentFactory.create(this.injector);
 
     this.appRef.attachView(this.componentRef.hostView);
 
-    const instance: any = this.componentRef.instance;
-
+    const instance = this.componentRef.instance;
     instance.message = message;
+    instance.icon = icon;
 
     const domElem = (this.componentRef.hostView as EmbeddedViewRef<any>).rootNodes[0] as HTMLElement;
-
     document.body.appendChild(domElem);
-
-    setTimeout(()=>{
-      this.drop();
-    },5000)
   }
 
+  private scheduleRemoval(): void {
+    setTimeout(() => {
+      this.drop();
+    }, 2000);
+  }
 
-  private drop() {
+  private drop(): void {
     if (this.componentRef) {
       this.appRef.detachView(this.componentRef.hostView);
       this.componentRef.destroy();
+      this.componentRef = undefined;
     }
   }
 }

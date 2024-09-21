@@ -8,6 +8,7 @@ import {LoginPayload} from "../../../interface/LoginPayload";
 import {NgIf, NgOptimizedImage} from "@angular/common";
 import {FormValidateMark} from "../../../utils/FormValidateMark";
 import {ToastService} from "../../../shared/toast/service/toast.service";
+import {faInfo} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-login',
@@ -53,14 +54,14 @@ export class LoginComponent extends FormValidateMark implements OnInit {
       .subscribe(async res => {
         const loggedInDetail: CredentialInfo = res[0];
         if (res?.length === 0) {
-          this.toastService.show("please enter valid username and password")
+          this.toastService.show("please enter valid username and password",faInfo)
           return;
         }
         this.authService.setLocalStorage(loggedInDetail)
         if (loggedInDetail?.role === 'Admin') {
           await this.router.navigateByUrl("/admin")
         } else {
-          await this.router.navigateByUrl("/home")
+          await this.router.navigateByUrl("/login")
         }
       })
   }

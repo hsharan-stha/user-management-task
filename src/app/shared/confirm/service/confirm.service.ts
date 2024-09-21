@@ -1,71 +1,50 @@
-import {
-  ApplicationRef,
-  ComponentFactoryResolver,
-  ComponentRef,
-  EmbeddedViewRef,
-  Injectable,
-  Injector
-} from '@angular/core';
-import {ConfirmComponent} from "../confirm.component";
-import {Observable, Subject, take} from "rxjs";
-import {ConfigDialogBoxConfig} from "../interface/confirm.interface";
+import { Injectable, ComponentRef, ApplicationRef, ComponentFactoryResolver, Injector } from '@angular/core';
+import { Subject, Observable } from 'rxjs';
+import {ConfirmComponent} from "@/app/shared/confirm/confirm.component";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConfirmService {
+  private componentRef!: ComponentRef<ConfirmComponent>;
+  private responseSubject = new Subject<boolean>();
 
-  private componentRef!:ComponentRef<any>;
+  constructor(
+    private componentFactoryResolver: ComponentFactoryResolver,
+    private appRef: ApplicationRef,
+    private injector: Injector
+  ) {}
 
-  private processConfirmation=new Subject();
+  public confirm(header: string, message: string): Observable<boolean> {
+    this.createComponent(header, message);
+    return this.responseSubject.asObservable();
+  }
 
-  constructor(private componentFactoryResolver: ComponentFactoryResolver,
-              private appRef: ApplicationRef,
-              private injector: Injector
-  ) { }
-
-
-  public show(modalObj: ConfigDialogBoxConfig) {
-    this.drop();
-    let componentFactory = this.componentFactoryResolver.resolveComponentFactory(ConfirmComponent);
-    this.componentRef = componentFactory.create(this.injector);
-
+  private createComponent(header: string, message: string): void {
+    const factory = this.componentFactoryResolver.resolveComponentFactory(ConfirmComponent);
+    this.componentRef = factory.create(this.injector);
     this.appRef.attachView(this.componentRef.hostView);
 
-    const instance: any = this.componentRef.instance;
+    document.body.appendChild((this.componentRef.hostView as any).rootNodes[0]);
 
-    instance.headerTitle = modalObj.headerTitle;
-    instance.bodyMessage = modalObj.bodyMessage ? modalObj.bodyMessage : 'Are You Sure';
-    instance.bodyTitle = modalObj.bodyTitle ? modalObj.bodyTitle : 'Ready to save';
+    this.componentRef.instance.show(header, message);
 
-    this.componentRef.instance.cancelBtn.pipe(take(1)).subscribe((data: object | boolean) => {
-      this.setProcessConfirmation(data);
-      this.drop();
-    });
-
-    this.componentRef.instance.confirmBtn.pipe(take(1)).subscribe((data: object | boolean) => {
-      this.setProcessConfirmation(data);
-      this.drop();
-    });
-
-    const domElem = (this.componentRef.hostView as EmbeddedViewRef<any>).rootNodes[0] as HTMLElement;
-
-    document.body.appendChild(domElem);
+    this.componentRef.instance.confirm.subscribe(() => this.onConfirm());
+    this.componentRef.instance.cancel.subscribe(() => this.onCancel());
   }
 
-  public getProcessConfirmation(): Observable<any> {
-    return this.processConfirmation.asObservable();
+  private onConfirm(): void {
+    this.responseSubject.next(true);
+    this.cleanup();
   }
 
-  private setProcessConfirmation(val: any) {
-    this.processConfirmation.next(val);
+  private onCancel(): void {
+    this.responseSubject.next(false);
+    this.cleanup();
   }
 
-  private drop() {
-    if (this.componentRef) {
-      this.appRef.detachView(this.componentRef.hostView);
-      this.componentRef.destroy();
-    }
+  private cleanup(): void {
+    this.appRef.detachView(this.componentRef.hostView);
+    this.componentRef.destroy();
   }
-
 }

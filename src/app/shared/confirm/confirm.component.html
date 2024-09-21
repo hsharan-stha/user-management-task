@@ -1,40 +1,10 @@
-<!--<div class="modals">-->
-<!--  <div class="modals-container">-->
-<!--    <div class="modals-container-header">-->
-<!--      {{ headerTitle }}-->
-<!--    </div>-->
-<!--    <div class="modals-container-body">-->
-<!--      <div>-->
-<!--        <div class="body-title">{{ bodyTitle }}</div>-->
-<!--        <div class="body-message">{{ bodyMessage }}</div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    <div class="modals-container-footer">-->
-<!--      <div class="d-flex">-->
-<!--        <button (click)="cancelBtnClick()" id="cancelBtn">-->
-<!--          {{ 'Cancel' }}-->
-<!--        </button>-->
-<!--        <button (click)="confirmBtnClick()" id="confirmBtn">-->
-<!--          {{ 'Ok' }}-->
-<!--        </button>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-
-<!-- The button to open the modal -->
-<label #openModal for="confirmation-modal" class="btn btn-primary">Open Modal</label>
-
-<input type="checkbox" id="confirmation-modal" class="modal-toggle" />
-<div class="modal">
+<div class="modal opacity-100 pointer-events-auto visible">
   <div class="modal-box">
-    <h3 class="font-bold text-lg">Are you sure you want to proceed?</h3>
-    <p class="py-4">This action cannot be undone. Please confirm whether you want to continue or cancel the process.</p>
+    <h3 class="font-bold text-lg">{{headerTitle}}</h3>
+    <p class="py-4">{{bodyMessage}}</p>
     <div class="modal-action">
-      <!-- Cancel Button -->
-      <label for="confirmation-modal" class="btn">Cancel</label>
-      <!-- Proceed Button -->
-      <button class="btn btn-error">Proceed</button>
+      <button (click)="onCancel()" class="btn">Cancel</button>
+      <button (click)="onConfirm()" class="btn btn-error">Proceed</button>
     </div>
   </div>
 </div>

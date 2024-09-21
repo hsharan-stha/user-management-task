@@ -34,6 +34,6 @@ export const routes: Routes = [
       loadComponent:()=>import("./components/home/login/login.component")
         .then((m)=>LoginComponent),
     },
-    {path:"**",redirectTo:"home"}
+    {path:"**",redirectTo:"login"}
 
 ];

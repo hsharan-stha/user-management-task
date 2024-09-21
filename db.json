@@ -1,38 +1,4 @@
 {
-  "product": [
-    {
-      "id": "3355",
-      "label": "VolleyBall",
-      "price": "1000",
-      "isFavouriteOf": [
-        3,
-        1,
-        2
-      ]
-    },
-    {
-      "id": "f055",
-      "label": "BasketBall",
-      "price": "2500",
-      "isFavouriteOf": [
-        2
-      ]
-    },
-    {
-      "id": "809d",
-      "label": "Pants",
-      "price": "2000",
-      "isFavouriteOf": [
-        2
-      ]
-    },
-    {
-      "id": "3da3",
-      "label": "Jeans 1",
-      "price": "3000",
-      "isFavouriteOf": []
-    }
-  ],
   "user": [
     {
       "id": "1",
@@ -161,6 +127,806 @@
       "username": "asdas",
       "isAdmin": true,
       "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "asdasdasd",
+      "last_name": "asdasdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "asdasdasd",
+      "last_name": "asdasdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "adsadsa",
+      "last_name": "sdasdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "adsadsa",
+      "last_name": "sdasdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "adsadsa",
+      "last_name": "sdasdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasda",
+      "username": "sdasd",
+      "isAdmin": true,
+      "department": "0"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasda",
+      "username": "sdasd",
+      "isAdmin": true,
+      "department": "0"
+    },
+    {
+      "id": "",
+      "first_name": "asdasdasd",
+      "last_name": "asdasdasd",
+      "username": "asdasdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasdasd",
+      "last_name": "asdasdasd",
+      "username": "asdasdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "cacz",
+      "last_name": "ZCczzxc",
+      "username": "zxczxc",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasdasd",
+      "last_name": "asdasdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "stw0047",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "stw0047",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "stw0047",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdsad",
+      "last_name": "asdasd",
+      "username": "stw0047",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdsad",
+      "last_name": "asdasdas",
+      "username": "stw0047",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "xzc",
+      "last_name": "zxczxc",
+      "username": "cxzc",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "sdasd",
+      "last_name": "asdas",
+      "username": "asdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "zxczxczx",
+      "last_name": "czxcxzc",
+      "username": "xzczx",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdad",
+      "last_name": "adad",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "asdad",
+      "last_name": "adad",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "asdsad",
+      "last_name": "asdadas",
+      "username": "dasda",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "adasd",
+      "username": "asdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "sadasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasda",
+      "last_name": "sdasda",
+      "username": "dasdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asasd",
+      "last_name": "assad",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "0"
+    },
+    {
+      "id": "",
+      "first_name": "asasd",
+      "last_name": "assad",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "0"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "adasd",
+      "username": "asdasd",
+      "isAdmin": false,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdas",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "asdas",
+      "last_name": "adasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdas",
+      "last_name": "adasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdas",
+      "last_name": "adasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "sdfdf",
+      "last_name": "sdfsdfsdf",
+      "username": "sdfsdfd",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "asdsadas",
+      "last_name": "dasdasd",
+      "username": "asasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdsadas",
+      "last_name": "dasdasd",
+      "username": "asasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdsadas",
+      "last_name": "dasdasd",
+      "username": "asasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasdsa",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasdsa",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdas",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdas",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdas",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasdas",
+      "username": "dadas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasdas",
+      "username": "dadas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdad",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asd",
+      "last_name": "asd",
+      "username": "asd",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "asdads",
+      "last_name": "asdasd",
+      "username": "asdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdads",
+      "last_name": "asdasd",
+      "username": "asdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "adad",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "adad",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "sadasda",
+      "username": "sdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "sadasda",
+      "username": "sdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "sadasda",
+      "username": "sdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdas",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdas",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "asdsd",
+      "last_name": "asdasda",
+      "username": "sdasdas",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "asdasda",
+      "last_name": "sdasdasd",
+      "username": "asdsad",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "adsasd",
+      "last_name": "asdasd",
+      "username": "asdas",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "asdasdasd",
+      "username": "asdasd",
+      "isAdmin": true,
+      "department": "1"
+    },
+    {
+      "id": "",
+      "first_name": "sadasd",
+      "last_name": "asdad",
+      "username": "adasd",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "sadasd",
+      "last_name": "asdad",
+      "username": "adasd",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "sadasd",
+      "last_name": "asdad",
+      "username": "adasd",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "sadasd",
+      "last_name": "asdad",
+      "username": "adasd",
+      "isAdmin": true,
+      "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "asdasd",
+      "last_name": "sadasdas",
+      "username": "asdad",
+      "isAdmin": true,
+      "department": "1"
     }
   ]
 }
