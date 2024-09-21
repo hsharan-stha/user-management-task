@@ -8,6 +8,7 @@ import {AsyncPipe, NgForOf} from "@angular/common";
 import {DataTableComponent} from "@/app/shared/data-table/data-table/data-table.component";
 import {ColumnInterface} from "@/app/interface/ColumnInterface";
 import {PaginateInterface} from "@/app/interface/PaginateInterface";
+import {Route, Router} from "@angular/router";
 
 @Component({
   selector: 'app-user-profile-list',
@@ -21,6 +22,10 @@ import {PaginateInterface} from "@/app/interface/PaginateInterface";
   styleUrl: './user-profile-list.component.css'
 })
 export class UserProfileListComponent implements OnInit{
+
+  constructor(private store:Store,private router:Router) {
+  }
+
 
   protected paginateSubject$=new BehaviorSubject<boolean>(true);
 
@@ -68,7 +73,7 @@ export class UserProfileListComponent implements OnInit{
             this.paginateSubject$.next(true)
             break;
           case params.some(i=>i==='click'):
-            console.log("click logic hereh");
+            this.router.navigate([`/admin/user-profile/detail/${params[1].id}`])
             break;
         }
       }
@@ -108,8 +113,6 @@ export class UserProfileListComponent implements OnInit{
     //   }
     // }
   ]
-  constructor(private store:Store) {
-  }
 
   ngOnInit(): void {
     this.paginateSubject$.pipe(

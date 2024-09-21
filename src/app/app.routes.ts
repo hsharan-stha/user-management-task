@@ -8,6 +8,9 @@ import {
 import {
   UserProfileListComponent
 } from "@/app/components/admin/user-profile/user-profile-list/user-profile-list.component";
+import {
+  UserProfileViewComponent
+} from "@/app/components/admin/user-profile/user-profile-view/user-profile-view.component";
 
 export const routes: Routes = [
     {
@@ -24,6 +27,10 @@ export const routes: Routes = [
         path:"user-profile-list",
         loadComponent:()=>import("./components/admin/user-profile/user-profile-list/user-profile-list.component")
           .then((m)=>UserProfileListComponent),
+      },{
+        path:"user-profile/detail/:id",
+        loadComponent:()=>import("./components/admin/user-profile/user-profile-view/user-profile-view.component")
+          .then((m)=>UserProfileViewComponent),
       },
       {path:"**",redirectTo:"user-profile-list"}
     ],

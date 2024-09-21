@@ -19,3 +19,9 @@ export const getUserProfileError=createSelector(
     return state.error
   }
 )
+
+export const getUserProfileDetail=createSelector(
+  getUserProfileState,(state)=>{
+    return state.data
+  }
+)

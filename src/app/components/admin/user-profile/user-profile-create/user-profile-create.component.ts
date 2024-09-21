@@ -37,7 +37,7 @@ export class UserProfileCreateComponent extends FormValidateMark implements OnIn
               private router: Router) {
     super();
     this.userProfileForm = this.formBuilder.group({
-      id: [""],
+      // id: [""],
       first_name: ["", [Validators.required, Validators.minLength(3)]],
       last_name: ["", [Validators.required, Validators.minLength(3)]],
       username: ["", [Validators.required, userNameValidator()]],
@@ -63,14 +63,10 @@ export class UserProfileCreateComponent extends FormValidateMark implements OnIn
       .pipe(take(1))
       .subscribe((confirmed)=>{
         if(confirmed) {
-          this.store.dispatch(addUserProfile({payload: this.userProfileForm.value}))
+          this.store.dispatch(addUserProfile({payload: {...this.userProfileForm.value}}))
         }
       })
 
-  }
-
-  protected async navigateToList(): Promise<void> {
-    await this.router.navigateByUrl("/admin/user-profile-list")
   }
 
   private loadSuccessErrorHandler(){

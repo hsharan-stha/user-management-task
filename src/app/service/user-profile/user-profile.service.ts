@@ -37,6 +37,10 @@ export class UserProfileService {
     return this.httpClient.post<UserProfile>(this.userProfileEndPoint,data);
   }
 
+  public getById(id:number):Observable<UserProfile>{
+    return this.httpClient.get<UserProfile>(`${this.userProfileEndPoint}/${id}`);
+  }
+
 
 
 }

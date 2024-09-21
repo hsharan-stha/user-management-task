@@ -1,0 +1,33 @@
+<div class="p-8 max-w-lg mx-auto">
+  <div class="card bg-base-100 shadow-xl">
+    <div class="card-body">
+      <h2 class="card-title text-2xl mb-4">User Details</h2>
+
+      <div class="mb-2">
+        <span class="font-bold">First Name: </span>
+        <span>{{details?.first_name}}</span>
+      </div>
+
+      <div class="mb-2">
+        <span class="font-bold">Last Name: </span>
+        <span>{{details?.last_name}}</span>
+      </div>
+
+      <div class="mb-2">
+        <span class="font-bold">Username: </span>
+        <span>{{details?.username}}</span>
+      </div>
+
+      <div class="mb-2">
+        <span class="font-bold">Admin Status: </span>
+        <span class="badge badge-primary">{{details?.isAdmin}}</span>
+      </div>
+
+      <div class="mb-2">
+        <span class="font-bold">Department: </span>
+        <span>{{details?.department}}</span>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -16,3 +16,11 @@ export const ADD_USER_PROFILE_FAIL="[User Profile] as user profile fail"
 export const addUserProfile=createAction(ADD_USER_PROFILE,props<{payload:UserProfile}>())
 export const addUserProfileSuccess=createAction(ADD_USER_PROFILE_SUCCESS,props<{data:UserProfile}>())
 export const addUserProfileFail=createAction(ADD_USER_PROFILE_FAIL,props<{error:string}>())
+
+
+export const GET_BY_ID_USER_PROFILE="[User Profile By Id] as user profile"
+export const GET_BY_ID_USER_PROFILE_SUCCESS="[User Profile By Id] as user profile success"
+export const GET_BY_ID_USER_PROFILE_FAIL="[User Profile By Id] as user profile fail"
+export const getByIdUserProfile=createAction(GET_BY_ID_USER_PROFILE,props<{id:number}>())
+export const getByIdUserProfileSuccess=createAction(GET_BY_ID_USER_PROFILE_SUCCESS,props<{data:UserProfile}>())
+export const getByIdUserProfileFail=createAction(GET_BY_ID_USER_PROFILE_FAIL,props<{error:string}>())

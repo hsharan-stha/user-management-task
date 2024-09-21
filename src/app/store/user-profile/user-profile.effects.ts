@@ -2,7 +2,12 @@ import {Injectable} from "@angular/core";
 import {Actions, createEffect, ofType} from "@ngrx/effects";
 import {UserProfileService} from "@/app/service/user-profile/user-profile.service";
 import {
-  addUserProfile, addUserProfileFail, addUserProfileSuccess,
+  addUserProfile,
+  addUserProfileFail,
+  addUserProfileSuccess,
+  getByIdUserProfile,
+  getByIdUserProfileFail,
+  getByIdUserProfileSuccess,
   loadUserProfile,
   loadUserProfileFail,
   loadUserProfileSuccess
@@ -49,5 +54,21 @@ export class UserProfileEffects{
     })
   )
   )
+
+
+  _getUserProfileById=createEffect(()=>
+  this.actions$.pipe(
+    ofType(getByIdUserProfile),
+    exhaustMap((action)=>{
+      return this.userProfileService.getById(action.id).pipe(
+        map((data)=>{
+          return getByIdUserProfileSuccess({data})
+        }),
+        catchError((err)=>{
+          return of(getByIdUserProfileFail({error:err.message}))
+        })
+      )
+    })
+  ))
 
 }

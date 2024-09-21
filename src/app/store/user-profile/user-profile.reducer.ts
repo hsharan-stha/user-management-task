@@ -3,6 +3,8 @@ import {userProfileState} from "@/app/store/user-profile/user-profile.state";
 import {
   addUserProfileFail,
   addUserProfileSuccess,
+  getByIdUserProfileFail,
+  getByIdUserProfileSuccess,
   loadUserProfileFail,
   loadUserProfileSuccess
 } from "@/app/store/user-profile/user-profile.actions";
@@ -34,6 +36,23 @@ on(loadUserProfileFail,(state,action)=>{
     }
   }),
   on(addUserProfileFail,(state,action)=>{
+    return {
+      ...state,
+      list:[],
+      data:undefined,
+      error:action.error
+    }
+  }),
+  on(getByIdUserProfileSuccess,(state,action)=>{
+    console.log(action.data)
+    return {
+      ...state,
+      list:undefined,
+      data:action.data,
+      error:""
+    }
+  }),
+  on(getByIdUserProfileFail,(state,action)=>{
     return {
       ...state,
       list:[],
