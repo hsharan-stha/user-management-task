@@ -23,3 +23,7 @@
   font-family: 'Inter' , sans-serif;
 }
 
+tr:has(.is-admin){
+  background-color: yellow;
+}
+

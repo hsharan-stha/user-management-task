@@ -935,6 +935,22 @@
       "username": "asdas",
       "isAdmin": true,
       "department": "2"
+    },
+    {
+      "id": "",
+      "first_name": "ram",
+      "last_name": "shrestha",
+      "username": "asd",
+      "isAdmin": false,
+      "department": "0"
+    },
+    {
+      "id": "",
+      "first_name": "shyam",
+      "last_name": "shrestha",
+      "username": "13123",
+      "isAdmin": true,
+      "department": "Maintenance"
     }
   ]
 }

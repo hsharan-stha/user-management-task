@@ -20,7 +20,11 @@ export class UserProfileEffects{
   this.actions$.pipe(
     ofType(loadUserProfile),
     exhaustMap((action)=>{
-      return this.userProfileService.findAll().pipe(
+      return this.userProfileService.findPaginatedAll(
+        action.currentPage,
+        action.itemPerPage,
+        action.search
+      ).pipe(
         map((data)=>{
           return loadUserProfileSuccess({list:data})
         }),

@@ -1,7 +1,7 @@
 export enum DepartmentType{
-  MARKETING,
-  MANAGEMENT,
-  MAINTENANCE
+  MARKETING="Marketing",
+  MANAGEMENT="Management",
+  MAINTENANCE="Maintenance"
 }
 
 

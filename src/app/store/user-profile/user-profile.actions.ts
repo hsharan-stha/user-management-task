@@ -5,7 +5,7 @@ export const LOAD_USER_PROFILE="[User Profile] load user profile";
 export const LOAD_USER_PROFILE_SUCCESS="[User Profile] load user profile success";
 export const LOAD_USER_PROFILE_FAIL="[User Profile] load user profile fail";
 
-export const loadUserProfile=createAction(LOAD_USER_PROFILE)
+export const loadUserProfile=createAction(LOAD_USER_PROFILE,props<{currentPage:number,itemPerPage:number,search?:{value:string,key:string}}>())
 export const loadUserProfileSuccess=createAction(LOAD_USER_PROFILE_SUCCESS,props<{list:UserProfile[]}>())
 export const loadUserProfileFail=createAction(LOAD_USER_PROFILE_FAIL,props<{error:string}>())
 
