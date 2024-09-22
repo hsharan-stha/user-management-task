@@ -9,22 +9,23 @@ import {delay, map, Observable} from "rxjs";
 })
 export class UserProfileService {
 
-  private userProfileEndPoint:string=`${environment.apiUrl}user`
+  private userProfileEndPoint=`${environment.apiUrl}user`
 
   constructor(private httpClient:HttpClient) { }
 
-  public findAll():Observable<Array<UserProfile>>{
-    return this.httpClient.get<Array<UserProfile>>(this.userProfileEndPoint)
+  public findAll():Observable<UserProfile[]>{
+    return this.httpClient.get<UserProfile[]>(this.userProfileEndPoint)
   }
 
-  public findPaginatedAll(currentPage:number,itemPerPage:number,search?:{value:string,key:string}):Observable<Array<UserProfile>>{
+  public findPaginatedAll(currentPage:number,itemPerPage:number,search?:{value:string,key:string}):Observable<UserProfile[]>{
     const start=(currentPage - 1) * itemPerPage;
     const end=start + itemPerPage;
 
-    return this.httpClient.get<Array<UserProfile>>(this.userProfileEndPoint).pipe(
+    return this.httpClient.get<UserProfile[]>(this.userProfileEndPoint).pipe(
       delay(500),
       map(res=>{
         if(search && search?.key && search?.value) {
+          // eslint-disable-next-line
          return res.filter((i:any) => i[search.key].toUpperCase().includes(search.value.toUpperCase()))
         }
         return res;

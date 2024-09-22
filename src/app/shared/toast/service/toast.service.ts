@@ -38,6 +38,7 @@ export class ToastService {
     instance.message = message;
     instance.icon = icon;
 
+    // eslint-disable-next-line
     const domElem = (this.componentRef.hostView as EmbeddedViewRef<any>).rootNodes[0] as HTMLElement;
     document.body.appendChild(domElem);
   }

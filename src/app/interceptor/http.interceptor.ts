@@ -4,7 +4,7 @@ import {AuthService} from "../service/auth/auth.service";
 
 export const httpInterceptor: HttpInterceptorFn = (req, next) => {
 
-  let authService = inject(AuthService);
+  const authService = inject(AuthService);
 
   if (authService.isAdmin()) {
     return next(req.clone({

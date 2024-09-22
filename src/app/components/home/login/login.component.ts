@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {LoginService} from "@/app/service/login/login.service";
 import {AuthService} from "@/app/service/auth/auth.service";
 import {Router} from "@angular/router";
@@ -21,7 +21,7 @@ import {faInfo} from "@fortawesome/free-solid-svg-icons";
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent extends FormValidateMark implements OnInit {
+export class LoginComponent extends FormValidateMark {
 
 
   public loginForm: FormGroup;
@@ -38,10 +38,6 @@ export class LoginComponent extends FormValidateMark implements OnInit {
     })
 
   }
-
-  ngOnInit(): void {
-  }
-
 
   public login(): void {
     if(this.loginForm.invalid){

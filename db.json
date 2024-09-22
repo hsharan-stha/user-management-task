@@ -111,6 +111,14 @@
       "username": "123",
       "isAdmin": true,
       "department": "Maintenance"
+    },
+    {
+      "id": "6164",
+      "first_name": "laxmi",
+      "last_name": "shrestha",
+      "username": "lsth",
+      "isAdmin": true,
+      "department": "Management"
     }
   ]
 }

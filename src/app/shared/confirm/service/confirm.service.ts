@@ -25,6 +25,7 @@ export class ConfirmService {
     this.componentRef = factory.create(this.injector);
     this.appRef.attachView(this.componentRef.hostView);
 
+    // eslint-disable-next-line
     document.body.appendChild((this.componentRef.hostView as any).rootNodes[0]);
 
     this.componentRef.instance.show(header, message);

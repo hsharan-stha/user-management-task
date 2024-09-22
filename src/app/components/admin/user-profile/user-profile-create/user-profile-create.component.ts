@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormValidateMark} from "@/app/utils/FormValidateMark";
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
@@ -25,7 +25,7 @@ import {faClose, faSave} from "@fortawesome/free-solid-svg-icons";
   templateUrl: './user-profile-create.component.html',
   styleUrl: './user-profile-create.component.css'
 })
-export class UserProfileCreateComponent extends FormValidateMark implements OnInit,OnDestroy {
+export class UserProfileCreateComponent extends FormValidateMark implements OnInit {
 
   protected readonly userProfileForm:FormGroup;
   protected readonly DepartmentOptions = DepartmentOptions;
@@ -81,10 +81,6 @@ export class UserProfileCreateComponent extends FormValidateMark implements OnIn
         this.toastService.show("Date Save Failed", faClose);
       }
     })
-  }
-
-  ngOnDestroy(): void {
-
   }
 
 

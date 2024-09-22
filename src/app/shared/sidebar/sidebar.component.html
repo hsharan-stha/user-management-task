@@ -12,7 +12,7 @@
 
     <ul class="menu menu-compact mt-6">
       <li *ngIf="username" class="hover-bordered">
-        <a (click)="logout()">
+        <a tabindex="0" (click)="logout()" (keydown)="logout()">
           <fa-icon [icon]="faSignOut"></fa-icon>
           <span class="ml-2">Logout</span>
         </a>

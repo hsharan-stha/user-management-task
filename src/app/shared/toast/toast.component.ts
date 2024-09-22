@@ -11,7 +11,7 @@ import {faAdd} from "@fortawesome/free-solid-svg-icons";
 })
 export class ToastComponent {
 
-  @Input() public message: string ="";
+  @Input() public message ="";
   @Input() public icon: IconDefinition=faAdd;
 
 }

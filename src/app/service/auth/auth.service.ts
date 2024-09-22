@@ -24,11 +24,11 @@ export class AuthService {
   }
 
   public getUserDetails():CredentialInfo{
-    let accessDetails:string | null= localStorage.getItem(environment.accessKey);
+    const accessDetails:string | null= localStorage.getItem(environment.accessKey);
     if(accessDetails){
       this.userDetails = JSON.parse(accessDetails)
     }
-    return <CredentialInfo>this.userDetails;
+    return this.userDetails as CredentialInfo;
   }
 
   public async logout():Promise<void>{

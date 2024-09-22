@@ -9,13 +9,13 @@ import {LoginPayload} from "@/app/interface/LoginPayload";
 })
 export class LoginService {
 
-  private userConfigUrl:string=`/assets/config/user.json`
+  private userConfigUrl=`/assets/config/user.json`
 
   constructor(private httpClient:HttpClient) { }
 
   public login(data:LoginPayload):Observable<CredentialInfo[]>{
     return this.httpClient.get<CredentialInfo[]>(this.userConfigUrl).pipe(
-     map((users:Array<CredentialInfo>)=>
+     map((users:CredentialInfo[])=>
         users.filter(i=>i.username===data?.username && i.password === data?.password)
      )
     )

@@ -26,8 +26,6 @@ describe('FilterPipe', () => {
       {label: 'test2'}
     ]
 
-    const searchText = {label: 'text'};
-
     // assert
     expect(pipe.transform(value, {label: ''})).toEqual(value)
   })

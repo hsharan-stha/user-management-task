@@ -63,17 +63,17 @@
     </div>
 
     <div class="form-control">
-      <label class="label">
+      <label for="isAdmin" class="label">
         <span class="label-text">Is Admin?</span>
         <span class="label-text-alt text-red-500">*</span>
       </label>
       <div class="flex space-x-4 gap-2">
-        <label class="flex label cursor-pointer gap-2">
-          <input type="radio" formControlName="isAdmin" [value]="true" class="radio checked:bg-blue-500" />
+        <label for="isAdmin" class="flex label cursor-pointer gap-2">
+          <input id="isAdmin" type="radio" formControlName="isAdmin" [value]="true" class="radio checked:bg-blue-500" />
           <span class="label-text">Yes</span>
         </label>
-        <label class="flex label cursor-pointer gap-2">
-          <input type="radio" formControlName="isAdmin" [value]="false" class="radio checked:bg-blue-500" />
+        <label for="isAdmin" class="flex label cursor-pointer gap-2">
+          <input  type="radio" formControlName="isAdmin" [value]="false" class="radio checked:bg-blue-500" />
           <span class="label-text">No</span>
         </label>
       </div>

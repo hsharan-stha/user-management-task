@@ -23,8 +23,10 @@
     <tr *ngFor="let data of dataList">
       <td *ngFor="let column of columns">
       <ng-container *ngIf="column.cell; else defaultCell">
-        <div [innerHTML]="getCellContent(data,column)"
-             (click)="column?.handleEvent? column?.handleEvent($event,data,'click'):undefined">
+        <div tabindex="0" [innerHTML]="getCellContent(data,column)"
+             (click)="column?.handleEvent? column?.handleEvent($event,data,'click'):undefined"
+             (keydown)="column?.handleEvent? column?.handleEvent($event,data,'click'):undefined"
+        >
         </div>
       </ng-container>
       <ng-template #defaultCell>

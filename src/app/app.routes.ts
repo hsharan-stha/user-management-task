@@ -16,21 +16,21 @@ export const routes: Routes = [
     {
     path:"admin",
     loadComponent:()=>import("./components/admin/admin/admin.component")
-      .then((m)=>AdminComponent),
+      .then(()=>AdminComponent),
     children:[
       {
         path:"user-profile",
         loadComponent:()=>import("./components/admin/user-profile/user-profile-create/user-profile-create.component")
-          .then((m)=>UserProfileCreateComponent),
+          .then(()=>UserProfileCreateComponent),
       },
       {
         path:"user-profile-list",
         loadComponent:()=>import("./components/admin/user-profile/user-profile-list/user-profile-list.component")
-          .then((m)=>UserProfileListComponent),
+          .then(()=>UserProfileListComponent),
       },{
         path:"user-profile/detail/:id",
         loadComponent:()=>import("./components/admin/user-profile/user-profile-view/user-profile-view.component")
-          .then((m)=>UserProfileViewComponent),
+          .then(()=>UserProfileViewComponent),
       },
       {path:"**",redirectTo:"user-profile-list"}
     ],
@@ -39,7 +39,7 @@ export const routes: Routes = [
     {
       path:"login",
       loadComponent:()=>import("./components/home/login/login.component")
-        .then((m)=>LoginComponent),
+        .then(()=>LoginComponent),
     },
     {path:"**",redirectTo:"login"}
 

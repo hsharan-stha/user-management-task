@@ -68,6 +68,8 @@ on(loadUserProfileFail,(state,action)=>{
     }
   })
 )
+
+// eslint-disable-next-line
 export function UserProfileReducer(state:any,action:any){
 return _UserProfileReducer(state,action)
 }

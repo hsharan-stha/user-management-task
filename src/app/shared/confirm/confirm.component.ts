@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {NgIf} from "@angular/common";
 
 @Component({
@@ -10,7 +10,7 @@ import {NgIf} from "@angular/common";
   templateUrl: './confirm.component.html',
   styleUrl: './confirm.component.css'
 })
-export class ConfirmComponent implements OnInit{
+export class ConfirmComponent{
   isVisible = false;
   headerTitle = 'Confirm Action';
   bodyMessage = 'Are you sure you want to proceed?';
@@ -38,6 +38,4 @@ export class ConfirmComponent implements OnInit{
     this.hide();
   }
 
-  ngOnInit(): void {
-  }
 }

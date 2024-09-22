@@ -1,7 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { UserProfileViewComponent } from './user-profile-view.component';
-import {MockStore} from "@ngrx/store/testing";
+import {UserProfileViewComponent} from './user-profile-view.component';
 import {provideStore} from "@ngrx/store";
 import {ActivatedRoute} from "@angular/router";
 import {of} from "rxjs";
@@ -9,7 +8,6 @@ import {of} from "rxjs";
 describe('UserProfileViewComponent', () => {
   let component: UserProfileViewComponent;
   let fixture: ComponentFixture<UserProfileViewComponent>;
-  let store:MockStore;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
