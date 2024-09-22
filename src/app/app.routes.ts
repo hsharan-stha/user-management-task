@@ -34,7 +34,7 @@ export const routes: Routes = [
       },
       {path:"**",redirectTo:"user-profile-list"}
     ],
-    // canActivate:[authGuard]
+    canActivate:[authGuard]
   },
     {
       path:"login",
