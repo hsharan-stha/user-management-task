@@ -1,14 +1,29 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserProfileViewComponent } from './user-profile-view.component';
+import {MockStore} from "@ngrx/store/testing";
+import {provideStore} from "@ngrx/store";
+import {ActivatedRoute} from "@angular/router";
+import {of} from "rxjs";
 
 describe('UserProfileViewComponent', () => {
   let component: UserProfileViewComponent;
   let fixture: ComponentFixture<UserProfileViewComponent>;
+  let store:MockStore;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UserProfileViewComponent]
+      imports: [UserProfileViewComponent],
+      providers:[
+        provideStore(),
+        {
+          provide:ActivatedRoute,
+          useValue:{
+            snapshot:{paramMap:{get:()=>'1'}},
+            params:of({id:'123'})
+          }
+        }
+      ]
     })
     .compileComponents();
 

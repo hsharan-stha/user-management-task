@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {AsyncPipe, NgForOf, NgIf, NgTemplateOutlet} from "@angular/common";
-import {Observable} from "rxjs";
+import {Observable, of} from "rxjs";
 import {ColumnInterface} from "@/app/interface/ColumnInterface";
 import {DomSanitizer, SafeHtml} from "@angular/platform-browser";
 import {PaginateInterface} from "@/app/interface/PaginateInterface";
@@ -19,9 +19,16 @@ import {PaginateInterface} from "@/app/interface/PaginateInterface";
 })
 export class DataTableComponent {
 
-  @Input() dataList$:Observable<any>;
-  @Input() columns:ColumnInterface[];
-  @Input() paginate:PaginateInterface;
+  @Input() dataList$:Observable<any>=of([]);
+  @Input() columns:ColumnInterface[]=[];
+  @Input() paginate:PaginateInterface={
+    currentPage: 0,
+    itemPerPage: 0,
+    nextPage(page: number): void {
+    },
+    previousPage(page: number): void {
+    }
+  };
   constructor(private sanitizer: DomSanitizer) {}
 
   getCellContent(row: any, column: any): SafeHtml {

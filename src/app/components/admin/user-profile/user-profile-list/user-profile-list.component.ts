@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Store} from "@ngrx/store";
 import {loadUserProfile} from "@/app/store/user-profile/user-profile.actions";
-import {BehaviorSubject, debounceTime, delay, distinct, Observable, take} from "rxjs";
+import {BehaviorSubject, debounceTime, delay, distinct, Observable, of, take} from "rxjs";
 import {UserProfile} from "@/app/interface/UserProfile";
 import {getUserProfileList} from "@/app/store/user-profile/user-profile.selector";
 import {AsyncPipe, NgForOf} from "@angular/common";
@@ -48,7 +48,7 @@ export class UserProfileListComponent implements OnInit{
 
   }
 
-  protected userProfileList$:Observable<UserProfile[] | undefined>;
+  protected userProfileList$:Observable<UserProfile[] | undefined>=of([]);
   protected columns:ColumnInterface[]=[
     {
       header:'Full Name',
