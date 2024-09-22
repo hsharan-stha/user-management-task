@@ -119,6 +119,30 @@
       "username": "lsth",
       "isAdmin": true,
       "department": "Management"
+    },
+    {
+      "id": "6cf2",
+      "first_name": "John",
+      "last_name": "Doe",
+      "username": "johndoe_123",
+      "isAdmin": false,
+      "department": "Marketing"
+    },
+    {
+      "id": "d5ad",
+      "first_name": "John",
+      "last_name": "Doe",
+      "username": "johndoe_123",
+      "isAdmin": false,
+      "department": "Management"
+    },
+    {
+      "id": "193a",
+      "first_name": "John",
+      "last_name": "Doe",
+      "username": "johndoe_123",
+      "isAdmin": false,
+      "department": "Management"
     }
   ]
 }
