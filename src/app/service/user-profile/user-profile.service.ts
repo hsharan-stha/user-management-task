@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {environment} from "@/environments/environment";
 import {HttpClient} from "@angular/common/http";
 import {UserProfile} from "@/app/interface/UserProfile";
-import {delay, filter, map, Observable} from "rxjs";
+import {delay, map, Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'

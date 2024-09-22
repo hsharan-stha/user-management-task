@@ -103,6 +103,14 @@
       "username": "123",
       "isAdmin": false,
       "department": "Maintenance"
+    },
+    {
+      "id": "a6b5",
+      "first_name": "againsome",
+      "last_name": "test",
+      "username": "123",
+      "isAdmin": true,
+      "department": "Maintenance"
     }
   ]
 }
