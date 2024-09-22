@@ -1,11 +1,11 @@
 
-<div class="flex flex-row">
+<div class="flex flex-row h-full">
     <app-sidebar (logoutEvent)="logout()" [sideBarList]="sideBarList" [username]="userDetails?.username"></app-sidebar>
 
   <div class="grow">
   <div class="flex flex-col h-full">
     <app-top-bar [username]="userDetails?.username"></app-top-bar>
-    <div class="p-6 h-full flex-grow bg-base-100">
+    <div class="p-6 h-full flex-grow bg-base-100 overflow-auto">
       <router-outlet></router-outlet>
     </div>
   </div>
