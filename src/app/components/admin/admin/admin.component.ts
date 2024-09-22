@@ -1,4 +1,4 @@
-import {Component, HostBinding, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
 import {AuthService} from "@/app/service/auth/auth.service";
 import {NgOptimizedImage} from "@angular/common";
@@ -24,7 +24,6 @@ import {faAdd, faHome} from "@fortawesome/free-solid-svg-icons";
 })
 export class AdminComponent implements OnInit{
 
-  @HostBinding("class.display-block") className="display-block";
 
   public userDetails:CredentialInfo | undefined;
 

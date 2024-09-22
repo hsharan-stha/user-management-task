@@ -1,4 +1,6 @@
-<div class="overflow-x-auto">
+<div class="flex flex-col h-full">
+  <ng-container *ngIf="dataList$ |  async as dataList">
+  <div class="grow">
   <table class="table table-compact w-full text-left">
     <!-- Table Header -->
     <thead>
@@ -20,7 +22,7 @@
       </td>
 
     </tr>
-    <tr *ngFor="let data of  dataList$ | async">
+    <tr *ngFor="let data of dataList">
       <td *ngFor="let column of columns">
       <ng-container *ngIf="column.cell; else defaultCell">
         <div [innerHTML]="getCellContent(data,column)"
@@ -34,15 +36,15 @@
     </tr>
     </tbody>
   </table>
-
-  <!-- Pagination -->
+</div>
   <div class="flex justify-between items-center mt-4">
     <div class="flex flex-row gap-3">
       <button [disabled]="paginate.currentPage===1" class="btn btn-sm" (click)="paginate.previousPage(paginate.currentPage)">Previous</button>
-      <button class="btn btn-sm " (click)="paginate.nextPage(paginate.currentPage)">Next</button>
+      <button [disabled]="dataList.length<paginate.itemPerPage" class="btn btn-sm " (click)="paginate.nextPage(paginate.currentPage)">Next</button>
     </div>
     <div>
       <span>Page {{paginate.currentPage}}</span>
     </div>
   </div>
+  </ng-container>
 </div>

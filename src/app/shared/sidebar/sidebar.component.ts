@@ -20,7 +20,7 @@ import {faSignOut} from "@fortawesome/free-solid-svg-icons";
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
-  @HostBinding("class.app-sidebar") className="app-sidebar";
+  @HostBinding("class.h-full") className="h-full";
 
   @Output() public logoutEvent:EventEmitter<boolean>=new EventEmitter<boolean>;
 

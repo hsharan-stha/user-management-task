@@ -1,4 +1,4 @@
-import {Component, HostBinding, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {LoginService} from "@/app/service/login/login.service";
 import {AuthService} from "@/app/service/auth/auth.service";
 import {Router} from "@angular/router";
@@ -23,7 +23,6 @@ import {faInfo} from "@fortawesome/free-solid-svg-icons";
 })
 export class LoginComponent extends FormValidateMark implements OnInit {
 
-  @HostBinding("class.app-login-style") className: string = ".app-login-style";
 
   public loginForm: FormGroup;
 

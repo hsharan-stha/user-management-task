@@ -39,6 +39,70 @@
       "username": "laxmi",
       "isAdmin": true,
       "department": "Marketing"
+    },
+    {
+      "id": "cb5a",
+      "first_name": "ram",
+      "last_name": "shankar",
+      "username": "ram123",
+      "isAdmin": false,
+      "department": "Management"
+    },
+    {
+      "id": "8636",
+      "first_name": "laxman",
+      "last_name": "shrestha",
+      "username": "12312",
+      "isAdmin": true,
+      "department": "Maintenance"
+    },
+    {
+      "id": "4964",
+      "first_name": "jubin",
+      "last_name": "nautyal",
+      "username": "12123",
+      "isAdmin": false,
+      "department": "Management"
+    },
+    {
+      "id": "9744",
+      "first_name": "rubin",
+      "last_name": "kher",
+      "username": "123123",
+      "isAdmin": false,
+      "department": "Maintenance"
+    },
+    {
+      "id": "9760",
+      "first_name": "iman",
+      "last_name": "shres",
+      "username": "1231",
+      "isAdmin": false,
+      "department": "Maintenance"
+    },
+    {
+      "id": "7f2c",
+      "first_name": "rohan",
+      "last_name": "lama",
+      "username": "1231",
+      "isAdmin": false,
+      "department": "Maintenance"
+    },
+    {
+      "id": "d3f7",
+      "first_name": "shre",
+      "last_name": "sing",
+      "username": "123",
+      "isAdmin": false,
+      "department": "Maintenance"
+    },
+    {
+      "id": "fc40",
+      "first_name": "suber",
+      "last_name": "lama",
+      "username": "123",
+      "isAdmin": false,
+      "department": "Maintenance"
     }
   ]
 }

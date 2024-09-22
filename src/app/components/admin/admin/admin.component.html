@@ -1,9 +1,24 @@
-<div class="container">
-  <app-sidebar (logoutEvent)="logout()" [sideBarList]="sideBarList" [username]="userDetails?.username"></app-sidebar>
-  <div class="main">
+<!--<div class="container">-->
+<!--  <app-sidebar (logoutEvent)="logout()" [sideBarList]="sideBarList" [username]="userDetails?.username"></app-sidebar>-->
+<!--  <div class="main">-->
+<!--    <app-top-bar [username]="userDetails?.username"></app-top-bar>-->
+<!--    <div class="body">-->
+<!--      <router-outlet/>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<div class="flex flex-row">
+    <app-sidebar (logoutEvent)="logout()" [sideBarList]="sideBarList" [username]="userDetails?.username"></app-sidebar>
+
+  <div class="grow">
+  <div class="flex flex-col h-full">
     <app-top-bar [username]="userDetails?.username"></app-top-bar>
-    <div class="body">
-      <router-outlet/>
+    <div class="p-6 h-full flex-grow bg-base-100">
+      <router-outlet></router-outlet>
     </div>
   </div>
+  </div>
+
 </div>

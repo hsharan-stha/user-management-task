@@ -1,11 +1,13 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {NgIf} from "@angular/common";
+import {FaIconComponent} from "@fortawesome/angular-fontawesome";
 
 @Component({
   selector: 'app-top-bar',
   standalone: true,
   imports: [
-    NgIf
+    NgIf,
+    FaIconComponent
   ],
   templateUrl: './top-bar.component.html',
   styleUrl: './top-bar.component.css'

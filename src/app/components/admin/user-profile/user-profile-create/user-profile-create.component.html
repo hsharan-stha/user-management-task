@@ -1,6 +1,7 @@
-
-<div class="min-h-screen flex items-center justify-center bg-gray-100 p-4">
-  <form [formGroup]="userProfileForm" (submit)="saveUser()" class="w-full max-w-lg bg-white shadow-md rounded-lg p-6 space-y-4">
+<div class="p-8 max-w-lg mx-auto">
+  <div class="card bg-base-100 shadow-xl">
+    <div class="card-body">
+  <form [formGroup]="userProfileForm" (submit)="saveUser()">
     <h2 class="text-2xl font-bold mb-6 text-center">User Registration</h2>
     <div class="form-control">
       <label for="first_name" class="label">
@@ -105,4 +106,6 @@
     </div>
 
   </form>
+</div>
+  </div>
 </div>

@@ -1,9 +1,14 @@
-<div class="top-bar">
-  <div class="profile">
-        <span *ngIf="username; else loginSection" class="user-name">{{username}}
-        </span>
-    <ng-template #loginSection>
-      <button (click)="loginFn()" class="btn-login">login</button>
-    </ng-template>
+
+<div class="navbar bg-base-200 shadow-lg">
+  <div class="flex gap-2 flex-1">
+    <span class="text-xl font-bold">User Management</span>
+  </div>
+  <div class="flex-none">
+    <div class="profile">
+      <span *ngIf="username; else loginSection" class="user-name text-lg font-semibold">{{username}}</span>
+      <ng-template #loginSection>
+        <button (click)="loginFn()" class="btn btn-primary">Login</button>
+      </ng-template>
+    </div>
   </div>
 </div>

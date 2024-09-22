@@ -16,6 +16,8 @@ const _UserProfileReducer=createReducer(userProfileState,
     return {
       ...state,
       list:action.list,
+      data:undefined,
+      getDetail:undefined,
       error:""
     }
   }),
@@ -23,6 +25,8 @@ on(loadUserProfileFail,(state,action)=>{
   return {
     ...state,
     list:[],
+    data:undefined,
+    getDetail:undefined,
     error:action.error
   }
 }),
@@ -32,6 +36,7 @@ on(loadUserProfileFail,(state,action)=>{
       ...state,
       list:undefined,
       data:action.data,
+      getDetail:undefined,
       error:""
     }
   }),
@@ -40,6 +45,7 @@ on(loadUserProfileFail,(state,action)=>{
       ...state,
       list:[],
       data:undefined,
+      getDetail:undefined,
       error:action.error
     }
   }),
@@ -47,6 +53,7 @@ on(loadUserProfileFail,(state,action)=>{
     return {
       ...state,
       list:undefined,
+      data:undefined,
       getDetail:action.getDetail,
       error:""
     }
@@ -56,6 +63,7 @@ on(loadUserProfileFail,(state,action)=>{
       ...state,
       list:[],
       data:undefined,
+      getDetail:undefined,
       error:action.error
     }
   })

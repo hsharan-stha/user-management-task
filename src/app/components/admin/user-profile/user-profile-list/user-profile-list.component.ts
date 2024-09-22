@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostBinding, OnInit} from '@angular/core';
 import {Store} from "@ngrx/store";
 import {loadUserProfile} from "@/app/store/user-profile/user-profile.actions";
 import {BehaviorSubject, debounceTime, delay, distinct, Observable, of, take} from "rxjs";
@@ -22,6 +22,7 @@ import {Route, Router} from "@angular/router";
   styleUrl: './user-profile-list.component.css'
 })
 export class UserProfileListComponent implements OnInit{
+  @HostBinding("class.h-full") className="h-full";
 
   constructor(private store:Store,private router:Router) {
   }

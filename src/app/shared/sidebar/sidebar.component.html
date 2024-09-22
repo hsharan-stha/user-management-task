@@ -1,25 +1,22 @@
-<div class="sidebar">
-  <div class="logo">
-<!--    <img ngSrc="./assets/icons/Logo.svg" alt="logo" fill/>-->
-  </div>
-  <div class="side-content">
-    <div class="navigator">
-      <ul>
-        <li *ngFor="let i of sideBarList" routerLinkActive="active-link"
-            [routerLink]="i.url">
+
+<div class="w-64 h-screen bg-base-200 text-base-content">
+  <div class="menu p-4 h-screen">
+    <ul class="menu menu-compact grow gap-4">
+      <li *ngFor="let i of sideBarList" routerLinkActive="active" class="hover-bordered">
+        <a [routerLink]="i.url">
           <fa-icon [icon]="i.icon"></fa-icon>
-          <span>{{i.label}}</span> </li>
-      </ul>
-    </div>
-    <div  class="logout">
-      <ul >
-        <li  *ngIf="username" (click)="logout()">
+          <span class="ml-2">{{ i.label }}</span>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="menu menu-compact mt-6">
+      <li *ngIf="username" class="hover-bordered">
+        <a (click)="logout()">
           <fa-icon [icon]="faSignOut"></fa-icon>
-
-          <span>Logout</span>
-        </li>
-      </ul>
-    </div>
+          <span class="ml-2">Logout</span>
+        </a>
+      </li>
+    </ul>
   </div>
-
 </div>
